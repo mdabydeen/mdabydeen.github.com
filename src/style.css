@@ -1,17 +1,18 @@
+body{
+	background: url("http://octodex.github.com/images/dojocat.jpg") no-repeat center center fixed;
+}
+
 #container{
 	width: 1140px;
 	margin: 0 auto;
-}
-
-#octocat{
-	float: left;
-	display: block;
 }
 
 #sidebar{
 	float: right;
 	border: 1px solid #303030;
 	text-align: left;
+	margin-bottom: 15px;
+	clear: both;
 }
 
 #sidebar label{
@@ -19,6 +20,10 @@
 	width: 100%;
 }
 
-#sidebar ul{
+#sidebar ul{}
+	
+
+#sidebar li{
+	border-bottom: 1px solid #303030;
 	list-style: none;
 }
