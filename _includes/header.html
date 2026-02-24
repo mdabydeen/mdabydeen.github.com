@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="shell header-shell">
+    <a class="brand" href="{{ '/' | relative_url }}">Mike Dabydeen</a>
+    <nav aria-label="Primary" class="primary-nav">
+      <ul>
+        {% assign current_url = page.url | replace: 'index.html', '' %}
+        {% for item in site.data.navigation %}
+          {% assign nav_url = item.url | replace: 'index.html', '' %}
+          <li>
+            <a href="{{ item.url | relative_url }}"{% if current_url == nav_url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

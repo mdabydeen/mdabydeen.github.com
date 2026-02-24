@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
-
-gem "jekyll"
+gem "jekyll", "~> 4.3"
+gem "jekyll-feed"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"

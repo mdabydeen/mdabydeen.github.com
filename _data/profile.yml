@@ -1,0 +1,39 @@
+name: Mike Dabydeen
+headline: Executive AI Transformation Leader, Technologist, Educator, and Coach
+experience_years: "20+"
+location: Ontario, Canada
+summary: >-
+  Engineering managers are being asked to deliver AI outcomes quickly, without
+  sacrificing reliability, quality, or team growth. Mike Dabydeen helps teams
+  modernize delivery with practical AI strategy, operating playbooks, and
+  manager enablement grounded in 20+ years of software leadership.
+current_roles:
+  - title: Software Development Manager
+    organization: Purolator
+  - title: Part-time Professor
+    organization: Conestoga College
+focus_areas:
+  - AI adoption strategy for engineering teams under delivery pressure
+  - Manager enablement playbooks for AI-enabled execution and coaching
+  - Practical systems for decision quality, governance, and continuous learning
+social_links:
+  - label: GitHub
+    url: https://github.com/mdabydeen
+contact:
+  issue_form_url: https://github.com/mdabydeen/mdabydeen.github.com/issues/new?template=contact.yml
+  form_endpoint: ""
+  email: ""
+cta:
+  primary_label: Request Workshop
+  primary_url: /contact/
+  secondary_label: AI Leadership Playbooks
+  secondary_url: /ai-leadership/
+offers:
+  workshop:
+    name: AI Leadership Workshop for Engineering Managers
+    format: 90-minute working session (virtual or onsite)
+    audience: Engineering managers and technical leaders guiding AI adoption
+    outcomes:
+      - Identify the highest-value AI workflow opportunities for the next 90 days.
+      - Define quality, reliability, and responsible AI guardrails for delivery teams.
+      - Build a manager enablement plan with clear milestones and ownership.

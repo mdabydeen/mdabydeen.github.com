@@ -1,0 +1,14 @@
+- label: Home
+  url: /
+- label: AI Leadership
+  url: /ai-leadership/
+- label: Open Source
+  url: /open-source/
+- label: Teaching
+  url: /teaching/
+- label: Blog
+  url: /blog/
+- label: About
+  url: /about/
+- label: Contact
+  url: /contact/

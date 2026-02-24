@@ -1,3 +1,40 @@
-# Mike Dabydeen Github Pages
+# Mike Dabydeen GitHub Pages
 
-This is the section for my github pages. 
+Personal landing page built with Jekyll and hosted on GitHub Pages.
+
+## Local development
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Local site: `http://127.0.0.1:4000`
+
+## Build
+
+```bash
+bundle exec jekyll build
+```
+
+## GitHub Actions
+
+- `.github/workflows/ci.yml`: builds the Jekyll site on push/PR to catch template/content regressions.
+- `.github/workflows/deploy-pages.yml`: builds and deploys to GitHub Pages on `main`.
+
+To use action-based deployment, set repository Pages source to **GitHub Actions** in repository settings.
+
+## Content structure
+
+- `_posts/` for blog posts
+- `_projects/` for open source highlights
+- `_teaching/` for course resources
+- `_data/` for profile and navigation data
+
+## Contact setup
+
+Contact options are configured in `_data/profile.yml`:
+
+- `contact.issue_form_url`: link to the GitHub contact request form.
+- `contact.form_endpoint`: optional external endpoint (for example Formspree) to enable the on-site contact form.
+- `contact.email`: optional direct email address shown as a quick action.

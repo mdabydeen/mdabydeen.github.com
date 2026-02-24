@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<main id="main-content" class="shell page-shell">
+  <article class="page-card reveal">
+    <header class="page-header">
+      <p class="kicker">Blog</p>
+      <h1>{{ page.title }}</h1>
+      <p class="meta-line">
+        <span>{{ page.date | date: '%B %-d, %Y' }}</span>
+        {% if page.reading_time %}
+          <span>{{ page.reading_time }} min read</span>
+        {% endif %}
+      </p>
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="chip-row">
+          {% for tag in page.tags %}
+            <span class="chip">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+    <div class="content-flow">
+      {{ content }}
+    </div>
+  </article>
+</main>

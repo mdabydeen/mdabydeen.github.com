@@ -1,38 +1,170 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Github | Michael Dabydeen</title>
-		<meta name="viewport" content="width=device-width; initial-scale=1.0;">
-		<link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="src/bootstrap/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="src/style.css" />
-		<script type="text/javascript" src="src/jquery-1.8.3.min.js"></script>
-		<script type="text/javascript" src="src/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="src/bootstrap/js/bootstrap-responsive.min.js"></script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="header" page-role="header">
-				<h1>Michael Dabydeen's Octocat | GitHub </h1>
-	    	</div>
-			<div id="sidebar" page-role="content">
-				<ul> 
-					<label>Keep in touch with me</label>
-					<li><a href="" target="_blank">LinkedIn</a>
-					<li><a href="" target="_blank">Twitter</a>	
-					<li><a href="" target="_blank">About.Me</a>
-				</ul>
-			</div>
-			<div id="sidebar" page-role="content">
-				<ul> 
-					<label>Currently working on</label>
-					<li><a href="" target="_blank">jQueryMobile-Blackberry10-Theme</a>
-					<li><a href="" target="_blank">jQuery Mobile</a>	
-				</ul>
-			</div>	
-			<div id="below_content">
+---
+layout: default
+title: Mike Dabydeen | Executive AI Transformation Leader
+description: >-
+  Executive AI leadership for engineering managers: practical strategy,
+  workshops, and operating playbooks to modernize delivery without losing
+  reliability.
+---
+{% assign workshop = site.data.profile.offers.workshop %}
+<main id="main-content" class="shell">
+  <section class="hero reveal">
+    <div class="hero-intro">
+      <p class="kicker">{{ site.data.profile.headline }}</p>
+      <h1>Help Your Engineering Managers Lead AI Transformation with Confidence</h1>
+      <p>{{ site.data.profile.summary }}</p>
+      <p>When AI is treated as a tooling experiment instead of an operating model, teams create noise, delivery risk, and uneven adoption. The goal is measurable execution gains with clear guardrails.</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href="{{ site.data.profile.cta.primary_url | relative_url }}">{{ site.data.profile.cta.primary_label }}</a>
+        <a class="button-link" href="{{ site.data.profile.cta.secondary_url | relative_url }}">{{ site.data.profile.cta.secondary_label }}</a>
+      </div>
+    </div>
 
-			</div>
-		</div>
-	</body>
-</html>
+    <aside class="hero-panel" aria-label="Career snapshot">
+      <h2>Career Snapshot</h2>
+      <ul class="role-list">
+        {% for role in site.data.profile.current_roles %}
+          <li>{{ role.title }} at {{ role.organization }}</li>
+        {% endfor %}
+      </ul>
+      <p class="panel-note">Former VP Engineering and CTO with an active manager + professor operating model.</p>
+      <div class="stats-grid">
+        <div class="stat">
+          <strong>{{ site.data.profile.experience_years }}</strong>
+          Years building and scaling software teams
+        </div>
+        <div class="stat">
+          <strong>2</strong>
+          Executive leadership roles (VP Engineering, CTO)
+        </div>
+        <div class="stat">
+          <strong>20+</strong>
+          Years coaching developers, leaders, and students
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section-block reveal">
+    <header class="section-head">
+      <p class="kicker">The Challenge</p>
+      <h2>AI pressure is high. Clarity is often missing.</h2>
+      <p>Engineering managers are expected to move fast on AI while protecting quality, reliability, and team growth.</p>
+    </header>
+    <div class="card-grid">
+      <article class="card">
+        <p class="meta">External Problem</p>
+        <h3>Tool Noise Over Strategy</h3>
+        <p>Many organizations run disconnected AI pilots without linking them to delivery outcomes.</p>
+      </article>
+      <article class="card">
+        <p class="meta">Internal Problem</p>
+        <h3>Managers Carry the Uncertainty</h3>
+        <p>Leaders know adoption is required but need a practical path for execution, guardrails, and team enablement.</p>
+      </article>
+      <article class="card">
+        <p class="meta">Philosophical Problem</p>
+        <h3>Innovation Should Not Break Discipline</h3>
+        <p>Teams should modernize with AI without sacrificing engineering quality, accountability, or delivery trust.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block reveal">
+    <header class="section-head">
+      <p class="kicker">The Plan</p>
+      <h2>How the engagement works</h2>
+      <p>A structured three-step model built for engineering managers and technical leaders.</p>
+    </header>
+    <div class="card-grid">
+      <article class="card">
+        <p class="meta">Step 1</p>
+        <h3>Assess Readiness</h3>
+        <p>Map delivery constraints, team workflows, and AI opportunities that matter in the next 90 days.</p>
+      </article>
+      <article class="card">
+        <p class="meta">Step 2</p>
+        <h3>Design the Operating Plan</h3>
+        <p>Define practical adoption priorities, governance guardrails, and measurable outcomes for managers.</p>
+      </article>
+      <article class="card">
+        <p class="meta">Step 3</p>
+        <h3>Enable Teams to Execute</h3>
+        <p>Run manager-focused enablement that turns strategy into execution habits and repeatable workflows.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block reveal">
+    <header class="section-head">
+      <p class="kicker">Primary Offer</p>
+      <h2>{{ workshop.name | default: 'AI Leadership Workshop for Engineering Managers' }}</h2>
+      <p>Built for {{ workshop.audience | default: 'engineering managers and technical leaders guiding AI adoption' }}.</p>
+    </header>
+    <article class="card offer-card">
+      <p><strong>Format:</strong> {{ workshop.format | default: '90-minute working session (virtual or onsite)' }}</p>
+      <h3>Workshop Outcomes</h3>
+      {% if workshop and workshop.outcomes and workshop.outcomes.size > 0 %}
+        <ul class="simple-list">
+          {% for outcome in workshop.outcomes %}
+            <li>{{ outcome }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <ul class="simple-list">
+          <li>Identify the highest-value AI workflow opportunities for the next 90 days.</li>
+          <li>Define guardrails for quality, reliability, and responsible AI use.</li>
+          <li>Build a manager enablement plan with clear milestones and ownership.</li>
+        </ul>
+      {% endif %}
+      <div class="hero-actions">
+        <a class="button-link primary" href="{{ '/contact/' | relative_url }}">Request Workshop</a>
+        <a class="button-link" href="{{ '/ai-leadership/' | relative_url }}">See AI Leadership Resources</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section-block reveal">
+    <header class="section-head">
+      <p class="kicker">Featured Work</p>
+      <h2>Implementation Signals</h2>
+      <p>Proof of practical leadership through playbooks, teaching artifacts, and execution systems.</p>
+    </header>
+    <div class="card-grid">
+      {% assign featured_projects = site.projects | where: 'featured', true | slice: 0, 3 %}
+      {% for project in featured_projects %}
+        <article class="card">
+          <p class="meta">{{ project.role }}</p>
+          <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+          <p>{{ project.summary }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section-block reveal">
+    <header class="section-head">
+      <p class="kicker">Latest Insights</p>
+      <h2>AI Leadership and Delivery Writing</h2>
+      <p>Playbooks for managers who need to modernize delivery while keeping execution quality high.</p>
+    </header>
+    <div class="card-grid">
+      {% for post in site.posts limit:3 %}
+        <article class="card">
+          <p class="meta">{{ post.date | date: '%b %-d, %Y' }}</p>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.summary }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section-block reveal cta-band">
+    <h2>Move from AI intent to AI execution.</h2>
+    <p>Start with a workshop designed for engineering managers responsible for delivery outcomes.</p>
+    <div class="hero-actions">
+      <a class="button-link primary" href="{{ '/contact/' | relative_url }}">Request Workshop</a>
+      <a class="button-link" href="{{ '/about/' | relative_url }}">Why Mike</a>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<main id="main-content" class="shell page-shell">
+  <article class="page-card reveal">
+    <header class="page-header">
+      <p class="kicker">Open Source</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.role %}
+        <p class="meta-line"><span>Role: {{ page.role }}</span></p>
+      {% endif %}
+      {% if page.summary %}
+        <p class="lede">{{ page.summary }}</p>
+      {% endif %}
+      {% if page.repo_url %}
+        <p><a class="button-link" href="{{ page.repo_url }}" target="_blank" rel="noopener">View Repository</a></p>
+      {% endif %}
+    </header>
+
+    <div class="content-flow">
+      {% if page.impact %}
+        <section>
+          <h2>Impact</h2>
+          <ul>
+            {% for item in page.impact %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+
+      {% if page.tech %}
+        <section>
+          <h2>Technology</h2>
+          <div class="chip-row">
+            {% for stack in page.tech %}
+              <span class="chip">{{ stack }}</span>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {{ content }}
+    </div>
+  </article>
+</main>

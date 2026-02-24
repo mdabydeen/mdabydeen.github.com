@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<main id="main-content" class="shell page-shell">
+  <article class="page-card reveal">
+    <header class="page-header">
+      <p class="kicker">Teaching</p>
+      <h1>{{ page.title }}</h1>
+      <p class="meta-line">
+        {% if page.course_code %}<span>{{ page.course_code }}</span>{% endif %}
+        {% if page.term %}<span>{{ page.term }}</span>{% endif %}
+        {% if page.status %}<span class="status status-{{ page.status }}">{{ page.status | capitalize }}</span>{% endif %}
+      </p>
+      {% if page.summary %}
+        <p class="lede">{{ page.summary }}</p>
+      {% endif %}
+    </header>
+
+    <div class="content-flow">
+      {{ content }}
+      {% if page.resources %}
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            {% for resource in page.resources %}
+              <li>
+                {% if resource.url %}
+                  <a href="{{ resource.url }}">{{ resource.label }}</a>
+                {% else %}
+                  {{ resource.label }}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    </div>
+  </article>
+</main>

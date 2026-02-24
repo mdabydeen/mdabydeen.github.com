@@ -1,0 +1,99 @@
+name: Workshop request
+description: Request an AI leadership workshop or advisory session with Mike.
+title: "[Workshop Request] "
+labels:
+  - contact
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out.
+        Use this form for non-sensitive workshop requests. Do not include confidential information.
+
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email address
+      placeholder: jane@example.com
+      description: Optional if you prefer follow-up through GitHub only.
+    validations:
+      required: false
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      placeholder: Example Corp
+    validations:
+      required: true
+
+  - type: input
+    id: team_size
+    attributes:
+      label: Engineering team size
+      placeholder: e.g., 25 engineers across 4 teams
+    validations:
+      required: true
+
+  - type: dropdown
+    id: adoption_stage
+    attributes:
+      label: AI adoption stage
+      options:
+        - Exploring use cases
+        - Running pilots
+        - Scaling adoption
+        - Reworking current approach
+    validations:
+      required: true
+
+  - type: dropdown
+    id: main_constraint
+    attributes:
+      label: Main constraint
+      options:
+        - Quality and reliability risk
+        - Delivery speed and prioritization
+        - Manager capability and team enablement
+        - Governance and responsible AI practices
+        - Cross-functional alignment
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - AI leadership workshop
+        - Manager enablement session
+        - Executive advisory conversation
+        - Speaking engagement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Goals and context
+      description: Share desired outcomes, key blockers, and what success looks like.
+      placeholder: We want to...
+    validations:
+      required: true
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Preferred timeline
+      placeholder: e.g., Start within 4 weeks
+    validations:
+      required: false

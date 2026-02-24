@@ -1,0 +1,50 @@
+title: Mike Dabydeen
+email: ""
+description: >-
+  Executive AI transformation leader helping engineering managers modernize
+  delivery with practical strategy, workshops, and playbooks.
+baseurl: ""
+url: "https://mdabydeen.github.io"
+timezone: America/Toronto
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+    permalink: /open-source/:name/
+  teaching:
+    output: true
+    permalink: /teaching/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Mike Dabydeen
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: teaching
+
+exclude:
+  - AGENTS.md
+  - README
+  - src
+  - tmp
